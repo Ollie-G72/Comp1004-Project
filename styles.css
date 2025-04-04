@@ -96,3 +96,8 @@
   .SubmitButton1{
     padding: 20px;
   }
+
+  #DuplicateText{
+    font-weight: bold;
+    font-size: 8;
+  }

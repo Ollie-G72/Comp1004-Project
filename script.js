@@ -3,9 +3,11 @@ const SubmitButton1 = document.getElementById("SubmitButton1");
 const SubmitButton2 = document.getElementById("SubmitButton2");
 const StrengthBox = document.getElementById("StrengthBox");
 const ClearHistory = document.getElementById("ClearAllButton");
+const DuplicateBox = document.getElementById("DuplicateText");
 const lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 const special = ['@','%','$','£','#','&','!'];
+//var DupeYN;
 
 
 
@@ -26,16 +28,21 @@ PasswordEntryBox.addEventListener("input",StrengthCheck);
 
 function PasswordAdd()
 {
-
+    DupeYN = false;
     let WebsiteName = document.forms["PasswordEntry"]["Website"].value;
     let Email = document.forms["PasswordEntry"]["Email"].value;
     let Password = document.forms["PasswordEntry"]["Password"].value;
     let key = WebsiteName + Email;
     
-
-    localStorage.setItem(key,Encryption(Password,Email,true));
+    //DuplicateCheck(Password);
+    Password = Encryption(Password,Email,true);
+    localStorage.setItem(key,Password);
     
-    //add a success indicator
+    //if(DupeYN == false){
+        //DuplicateBox.value = "Password Entered";
+    //}
+    
+    DuplicateBox.value = "Password Entered";
 }
 
 function PasswordSearch()
@@ -102,6 +109,7 @@ function ClearAll()
     document.forms["PasswordRequest"]["Email"].value = "";
     document.forms["PasswordRequest"]["PasswordOutput"].value = "";
     
+    DuplicateBox.value = " ";
 }
 
 function StrengthCheck()
@@ -214,6 +222,22 @@ function Encryption(Password,Email,EorD)
             console.log(Final[x]);
         }
     }
-    
+
     return Final;
+}
+
+function DuplicateCheck(Password)
+{
+    DuplicateBox.value = " ";
+    let keys = Object.keys(localStorage);
+    let Temp = "";
+
+    for(let x = 0; x < keys.length;x++){
+        Temp = keys[x];
+        if (Password == localStorage.getItem(Temp)){
+            
+            DuplicateBox.value = "Duplicate Password Found, Recommend New Password";
+            DupeYN = true;
+        }
+    }
 }
