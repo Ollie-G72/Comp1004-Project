@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <title> Password Management </title>
+    <link href="styles.css" rel="stylesheet" >
+</head>
+<body>
+    <header>
+        <h1><div class = "logo"> Password Manager</div></h1>
+    </header>
+    <main id = MainCode>
+        <div class = "box1">
+            <form name = PasswordRequest>
+                <h2> Password Request</h2>
+                <table>
+                    <tr>
+                        <td>Website Name</td>
+                        <td><input type = "text" name = Website> </td>
+                    </tr>
+                    <tr>
+                        <td>Username/Email</td>
+                        <td><input type = "text" name = Email> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <button type = "button" id = "SubmitButton1"> Submit </button> <button type = "button" id = "ClearButton1"> Clear </button></td>
+                    </tr>
+                    <tr>
+                        <td> Password </td>
+                        <td><input type="text" name = PasswordOutput></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
+        <div class = "box2">
+            <form name = PasswordEntry>
+                <h2> Password Entry</h2>
+                <table>
+                    <tr>
+                        <td>Website Name</td>
+                        <td><input type = "text" name = Website> </td>
+                    </tr>
+                    <tr>
+                        <td>Username/Email</td>
+                        <td><input type = "text" name = Email> </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type = "text" name = Password> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> 
+                            <div class = "StrengthColourBox" id = "StrengthBox"> Password Strength </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <button type = "button" id = "SubmitButton2"> Submit </button> <button type = "button" id = "GenButton"> Generate </button> <button type = "button" id = "ClearButton2"> Clear </button></td>
+                    </tr>
+                </table>
+            </form >
+        </div>
+        
+        <div class = "ClearHistory">
+            <h2> Clear All History</h2>
+            <button type = "button" id = "ClearAllButton"> Clear All History </button>
+        </div>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: #85c1e9;
+    line-height: 1.5;
+    align-items: center;
+  }
+
+  header{
+    background-color: #2980b9;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: x-large;
+  }
+
+  table{
+    border: 1px solid black;
+    background-color: #85c1e9;
+    border-collapse: separate;
+    border-spacing: 5px;
+  }
+
+  td{
+    padding: 8;
+  }
+
+  input{
+    height: 25px;
+  }
+
+  #MainCode{
+    padding: 10px 0;
+    place-items: center;
+  }
+
+  .box1{
+    background-color: #2980b9;
+    padding: 25px 0;
+    width: 100%;
+    place-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+
+  }
+
+  .box2{
+    background-color: #2980b9;
+    padding: 25px 0;
+    width: 100%;
+    place-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ClearHistory{
+    background-color: #2980b9;
+    padding: 25px 0;
+    width: 100%;
+    place-items: center;
+  }
+
+  #ClearAllButton{
+    width: 150px;
+    height: 30px;
+    background-color: #ff4403;
+    font-weight: bold;
+    font-size: 8;
+  }
+
+
+  .StrengthColourBox{
+    width: 165px;
+    height: 20px;
+    background-color: red;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 1;
+  }
+  .Password-Output{
+    width: 165px;
+    height: 20px;
+    border: 1px solid black;
+  }
+
+  .GenPassword-Output{
+    width: 165px;
+    height: 20px;
+    border: 1px solid black;
+  }
+
+  .SubmitButton1{
+    padding: 20px;
+  }
